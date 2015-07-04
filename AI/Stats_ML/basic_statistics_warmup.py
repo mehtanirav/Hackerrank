@@ -38,7 +38,7 @@ def compute_standard_deviation(n, data):
     mean = compute_mean(n, data)
     deviations = [num - mean for num in data]
     sum_of_squares = sum(num*num for num in deviations)
-    variance = sum_of_squares/n
+    variance = sum_of_squares/n # in the actual definition of standard deviation, this should be n - 1
     standard_deviation = math.sqrt(variance)
     return standard_deviation
 
